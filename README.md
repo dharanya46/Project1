@@ -1,4 +1,4 @@
 # Project1
-scrapping bus details
-importing to mysql
+scrapping bus details,
+importing to mysql,
 building application using Streamlit
