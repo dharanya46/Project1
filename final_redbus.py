@@ -57,7 +57,10 @@ def query_buses(route_name=None, price=None, bustype=None, departing_time=None, 
     cursor.execute(query, params)
     data = cursor.fetchall()
     conn.close()
-    return pd.DataFrame(data)
+    m=pd.DataFrame(data)
+    m['reaching_time'] = m['reaching_time'].astype(str)
+    m['departing_time'] = m['departing_time'].astype(str)
+    return m 
 
 
 st.title("Choose Bus as You Wish")
